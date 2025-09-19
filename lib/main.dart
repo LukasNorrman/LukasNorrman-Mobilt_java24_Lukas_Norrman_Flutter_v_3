@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // Importera din första sida
-import 'contact_list_page.dart'; // Importera din andra sida
+import 'home_page.dart';
+import 'contact_list_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
 
-      // Ställ in Named Routes här
+      // Ställer in Routes
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Hem'),

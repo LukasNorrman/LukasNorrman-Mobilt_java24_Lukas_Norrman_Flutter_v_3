@@ -16,21 +16,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _saveName() async {
     if (_nameController.text.isEmpty) {
-      return; // Spara inte om textfältet är tomt
+      return; // Sparar inte om textfältet är tomt
     }
 
     final prefs = await SharedPreferences.getInstance();
 
-    // Hämta den befintliga listan med namn. Om den inte finns, skapa en tom lista.
+    // Hämtar den befintliga listan med namn. Om den inte finns, skapa en tom lista.
     final List<String> names = prefs.getStringList('contact_names') ?? [];
 
-    // Lägg till det nya namnet i listan
+    // Lägger till det nya namnet i listan
     names.add(_nameController.text);
 
-    // Spara den uppdaterade listan i shared_preferences
+    // Sparar den uppdaterade listan i shared_preferences
     await prefs.setStringList('contact_names', names);
 
-    // Rensa textfältet efter att namnet har sparats
+    // Rensar textfältet efter att namnet har sparats
     _nameController.clear();
   }
 
@@ -45,14 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            // Bild från webben (UI-widget som använder URI/länk)
             Image.network(
+              // Bilden som visas när man är på startsidan (UI-widget)
               'https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBob25lJTIwY2FsbHxlbnwwfHwwfHx8MA%3D%3D', // Exempel på en länk till en bild
               height: 200,
             ),
             const SizedBox(height: 20),
-
-            // Textfält (UI-widget)
+            // UI-widget
             TextFormField(
               controller: _nameController,
               decoration: const InputDecoration(

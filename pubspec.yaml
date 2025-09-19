@@ -51,8 +51,8 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: false
-  image_path: "assets/icon/telephone.png" # Ange sökvägen till din ikonbild
-  min_sdk_android: 21 # minimi Android-SDK som din app stöder
+  image_path: "assets/icon/telephone.png"
+  min_sdk_android: 21
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

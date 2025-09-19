@@ -17,7 +17,7 @@ class _ContactListPageState extends State<ContactListPage> {
   @override
   void initState() {
     super.initState();
-    _loadNames(); // Ladda namnen när sidan skapas
+    _loadNames(); // Laddar namnen när sidan skapas
   }
 
   Future<void> _loadNames() async {
